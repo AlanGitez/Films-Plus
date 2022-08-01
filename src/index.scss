@@ -1,0 +1,8 @@
+/* Abstracts */
+@use "./scss/abstracts/variables.scss";
+/* Base */
+@use "./scss/base/reset.scss";
+@use "./scss/base/base.scss";
+
+/* Components */
+@use "./scss/components/index.scss";
