@@ -1,0 +1,21 @@
+@use "./nav-menu.scss";
+@use "../../abstracts/variables.scss";
+
+.navbar{
+    background-color: black;
+
+    color: whitesmoke;
+    height: 70px;
+    width: 100%;
+    margin-bottom: auto;
+    padding: 2px;
+
+    display:flex;
+
+    
+    .logo{
+        height: 90%;
+        margin: 4px auto 4px 4px;
+    }
+
+}
