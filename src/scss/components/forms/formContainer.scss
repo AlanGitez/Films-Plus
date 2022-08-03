@@ -2,6 +2,7 @@
     min-height: 100vh;
     background: url("../../../images/form_background.jpg") no-repeat center center fixed;
     background-size: cover;
+    opacity: 90%;
     display: flex;
 }
 
@@ -9,7 +10,7 @@
     margin: auto;
     padding: 0px 50px 50px 50px;
     grid-template-rows: auto auto;
-    background-color: rgba(0, 0, 0, 0.850);
+    background-color: rgba(0, 0, 0, 0.95);
     border-radius: 3px;
     height: auto;
     display: flex;

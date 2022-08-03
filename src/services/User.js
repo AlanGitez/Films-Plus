@@ -1,5 +1,8 @@
-import axios from "axios";
-import { response } from "../utils/createResponse"
+const axios = require("axios");
+const { response } = require("../utils/createResponse");
+
+
+
 class User {
   static async loginRequest(body) {
     try {
@@ -20,4 +23,4 @@ class User {
     }
   }
 }
-export default User;
+module.exports = User;

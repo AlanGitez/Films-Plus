@@ -1,4 +1,4 @@
-import User from "../../services/user";
+import User from "../../services/User";
 
 const { createAsyncThunk, createReducer } = require("@reduxjs/toolkit");
 const axios = require("axios");

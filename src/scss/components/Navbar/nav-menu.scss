@@ -1,32 +1,50 @@
 .nav-menu{
     padding: 4px;
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-
+    
     .burger-menu{
         display: none; 
     }
 
-    .menu{
-        margin-left: auto;
-        
-        ul.list{
+    .menu{ 
+        margin-right: 1%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        ul.nav-list{
             font-weight: bold;
             letter-spacing: 2px;
         
             li.item{
-                margin-left: 50px;
                 display: inline-block;
+                margin-left: 50px;
             }
             
-            .icon-me{      
-                margin-right: 10px;
-                margin-top: 15px;
-                height: 40px;
-                width: 40px;
-                
-            }
+            
+        }
+    }
+    .user-list{
+        display: flex;
+        align-items: flex-end;
+        li{
+            margin-left: 25px;
+        }
+        .icon-search{      
+            margin-left: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            height: 20px;
+            width: 20px;
+            
+        }
+        .icon-me{      
+            margin-left: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            height: 40px;
+            width: 40px;
+            
         }
     }
 }
@@ -34,7 +52,7 @@
 @media (max-width: 600px){
     .nav-menu{
         .burger-menu{
-            margin: auto 10px auto auto;
+            margin: 15px 10px auto auto;
             padding: 2px;
             background-color:var(--color-primary);
             border-radius: 2px;

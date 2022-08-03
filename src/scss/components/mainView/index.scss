@@ -1,0 +1,46 @@
+@use "./info.scss";
+
+.mainview-container{
+    margin: auto;
+    margin-top: 0px;
+    background: url("../../../images/fondo-prueba.jpeg") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 2px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.mainview{
+    height: 300px;
+    width: 100%;
+}
+
+@media (max-width: 1050px){
+    .mainview-container{
+        height: 70vh;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 800px){
+    .mainview-container{
+        height: 50vh;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .mainview-container{
+        height: 50vh;
+    
+    }
+    
+}

@@ -1,0 +1,95 @@
+.main-container .main-content{
+    .slider-container{
+        width: 100%;
+        padding: 20px 0;
+        .slider{
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+
+        }
+        .movie{
+            height: 220px;
+            min-width: calc(25%);
+            transition: .3s ease all;
+            box-shadow: 5px 5px 10px  rgba(0, 0, 0, .3);
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 1400px){
+    .main-container{
+        .main-content{
+            .slider-container{
+                width: 100%;
+                .slider{
+                    overflow: hidden;
+
+                    scroll-behavior: smooth;
+                    display: flex;
+                }
+                .movie{
+                    height: 200px;
+                    min-width: calc(20%);
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .main-container{
+        .main-content{
+            .slider-container{
+                width: 100%;
+                .slider{
+                    overflow:hidden;
+                    scroll-behavior: smooth;
+                    display: flex;
+                }
+                .movie{
+                    height: 200px;
+                    min-width: calc(33.33%);
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 500px){
+    .main-container{
+        .main-content{
+            .slider-container{
+                width: 100%;
+                .slider{
+                    overflow: hidden;
+
+                    scroll-behavior: smooth;
+                    display: flex;
+                }
+                .movie{
+                    height: 175px;
+                    min-width: calc(50%);
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}

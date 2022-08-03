@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from "../../images/logo.png"
 import { BsPersonBoundingBox } from "react-icons/bs"
+import { BsSearch } from "react-icons/bs"
 
 export default function Navbar() {
     return (
@@ -16,10 +17,15 @@ export default function Navbar() {
                         <div className="line"></div>
                     </div>
                     <div className="menu">
-                        <ul className="list">
+                        <ul className="nav-list">
                             <li className="item">Movies</li>
                             <li className="item">Series</li>
                             <li className="item">Favorites</li>
+                        </ul>
+
+                        <ul className="user-list">
+                            <li className='item'>{<BsSearch className='icon-search' />}</li>
+
                             <li className='item'>{<BsPersonBoundingBox className='icon-me' />}</li>
                         </ul>
                     </div>
