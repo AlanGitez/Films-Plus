@@ -6,23 +6,21 @@ import Register from "./components/Register";
 import { Route, Routes } from "react-router";
 import Footer from './commons/Footer';
 import Navbar from './commons/Navbar';
-import Home from './commons/Home';
-
+import Home from './components/Home';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getPopularMovies())
+  }, [dispatch])
 
-}, [])
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Routes>
-        <Route path={"/" || "/home"} element={<Home />}/>
+        <Route path="/" element={<Home />}/>
         <Route path='/register' element={<Register />} />
-
       </Routes>
       <Footer/>
     </>

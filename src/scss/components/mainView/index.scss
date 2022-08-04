@@ -3,7 +3,7 @@
 .mainview-container{
     margin: auto;
     margin-top: 0px;
-    background: url("../../../images/fondo-prueba.jpeg") no-repeat;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 2px;
     position: relative;
@@ -21,9 +21,15 @@
     width: 100%;
 }
 
+.mainview-container:hover{
+    .info-container{
+        background-position: right;
+        display: inherit;
+    }
+}
 @media (max-width: 1050px){
     .mainview-container{
-        height: 70vh;
+        height: 90vh;
         width: 100%;
     }
     

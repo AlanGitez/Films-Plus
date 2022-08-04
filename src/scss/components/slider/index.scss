@@ -20,6 +20,7 @@
             position: absolute;
             cursor: pointer;
             transition: .2s ease all;
+            z-index: 200;
         }
 
         .arrow:hover{

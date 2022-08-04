@@ -32,6 +32,7 @@ export default function Slider() {
                         id="left-arrow"
                         className="arrow left-arrow"
                         onClick={paginationHandler}>{<IoIosArrowBack className='arrow-icon left' />}</button>
+
                     <div className="slider-container">
                         <div ref={row} className="slider">
                             {popularMovies.movies?.map((movie, i) => (
@@ -40,6 +41,7 @@ export default function Slider() {
 
                         </div>
                     </div>
+
                     <button
                         ref={rigthArrow}
                         role={"button"}

@@ -1,6 +1,11 @@
-
+/* 
+IDEA: Hacer que cada elemento de la info tenga una animacion sutilmente distinta, con coherencia.
+*/
 .info-container{
-    background-color: rgba(0,0,0, 0.25);
+    display: none;
+    transition: background-position .9s ease;
+    padding-top: 100px;
+    background: linear-gradient(to right, rgba(255,255,255, 0) 50%, rgba(0,0,0, .4) 50%) no-repeat left / 200%;
     box-shadow: 0 0 10px 10px  rgba(0,0,0, 0.2);
     color: white;
     font-weight: 500;
@@ -12,23 +17,27 @@
     bottom: 0px;
     
     .info{
-        margin: 160px auto auto 60px;
+        margin: 100px auto auto 60px;
         height: 100%;
         width: 100%;
         
         .title{
-            height: 100px;
+            font-size: 90px;
+            // height: 130px;
+            height: auto;
         }
-
         .description{
-            height: 150px;
+            font-size: 16px;
+            margin: 20px auto auto 10px;
+            height: auto;
             width: 50%;
         }
 
         .menu-container{
             background-color: whitesmoke;
             border-radius: 5px;
-            margin-top: 40px;
+            margin-top: 50px;
+            margin-left: 10px;
             padding: 5px;
             display: flex;
             height: 35px;
@@ -57,17 +66,28 @@
 
 @media (max-width: 800px){
     .info-container{
-    
+        padding-top: 50px;
     
     .info{
-        margin: 25px auto auto 40px;
+        margin: 0px auto auto 35px;
         height: 100%;
-        width: 80%;
-        
+        width: 100%;
+        // margin: 25px auto auto 40px;
+        // height: 100%;
+        // width: 80%;
+        .title{
+            height: 80px;
+        }
+
+        .description{
+            height: 150px;
+            width: 80%;
+        }
+
         .menu-container{
             background-color: whitesmoke;
             border-radius: 5px;
-            margin-top: 120px;
+            margin-top: 40px;
             padding: 5px;
             display: flex;
             height: 35px;
@@ -90,15 +110,8 @@
         }
     }
 
-    .description{
+ 
 
-        height: 100px;
-        width: 60%;
-    }
-
-    .title{
-        margin-bottom: 20px;
-    }
 }
 }
 

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "../../images/logo.png"
 import { BsPersonBoundingBox } from "react-icons/bs"
 import { BsSearch } from "react-icons/bs"
+import UserMenu from '../../components/UserMenu'
 
 export default function Navbar() {
+    const [showOptions, setShowOptions] = useState(false);
     return (
         <>
             <header className='navbar'>
@@ -26,11 +28,20 @@ export default function Navbar() {
                         <ul className="user-list">
                             <li className='item'>{<BsSearch className='icon-search' />}</li>
 
-                            <li className='item'>{<BsPersonBoundingBox className='icon-me' />}</li>
+                            <li className='icon-me-item item'>
+                                {<BsPersonBoundingBox
+                                    className='icon-me'
+                                    onClick={() => setShowOptions(!showOptions)} />}
+
+                                {showOptions && <UserMenu />}
+
+                            </li>
                         </ul>
                     </div>
 
                 </div>
+
+
             </header>
         </>
     )
