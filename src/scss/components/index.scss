@@ -3,7 +3,7 @@
 @use "./forms/form.scss";
 
 /* NAVBAR */
-@use "./Navbar";
+@use "./navbar";
 
 /* FOOTER */    
 @use "./footer";
@@ -14,5 +14,11 @@
 /* SLIDER */
 @use "./slider";
 
+/* SLIDER ANNEX */
+@use "./sliderAnnex";
+
 /* USER MENU */
 @use "./userMenu";
+
+/* DETAIL MODAL */
+@use "./detailModal";

@@ -1,28 +1,27 @@
 .main-container .main-content{
+
     .slider-container{
         width: 100%;
         .slider{
-            padding: 20px 0;
+            padding:20px 0;
             display: flex;
             overflow: hidden;
             scroll-behavior: smooth;
-
+            position: relative;
         }
         .movie{
-            height: 220px;
-            min-width: calc(25%);
+            min-width: 14.3%;
             transition: .3s ease all;
+            padding:20px 0;
+            height: 220px;
             box-shadow: 5px 5px 10px  rgba(0, 0, 0, .3);
+      
         }
         img{
             height: 100%;
             width: 100%;
         }
-    }
-}
-
-.movie:hover{
-    transform: scale(120%);
+        }
 }
 
 @media (min-width: 1400px){
@@ -37,8 +36,8 @@
                     display: flex;
                 }
                 .movie{
-                    height: 200px;
-                    min-width: calc(20%);
+                    height: 235px;
+                    min-width: calc(14.3%);
                 }
                 img{
                     height: 100%;
@@ -60,7 +59,7 @@
                     display: flex;
                 }
                 .movie{
-                    height: 200px;
+                    height: 260px;
                     min-width: calc(33.33%);
                 }
                 img{
@@ -85,7 +84,7 @@
                     display: flex;
                 }
                 .movie{
-                    height: 175px;
+                    height: 240px;
                     min-width: calc(50%);
                 }
                 img{

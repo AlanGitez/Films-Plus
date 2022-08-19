@@ -13,10 +13,14 @@ export default function Navbar() {
                     <img src={logo} alt="" className="logo" />
                 </div>
                 <div className='nav-menu'>
-                    <div className="burger-menu">
+                    <div
+                        className="burger-menu"
+                        onClick={() => setShowOptions(!showOptions)}>
                         <div className="line"></div>
                         <div className="line"></div>
                         <div className="line"></div>
+                        {showOptions && <UserMenu />}
+
                     </div>
                     <div className="menu">
                         <ul className="nav-list">

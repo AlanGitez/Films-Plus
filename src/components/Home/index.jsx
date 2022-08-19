@@ -1,21 +1,54 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { getPopularMovies } from '../../state/Movies/popular';
 import MainView from './MainView'
-import Slider from '../../commons/Slider'
-import { popular } from '../../services/Movies';
+import DetailModal from '../../commons/DetailModal';
+import PopularSlider from '../../components/PopularSlider';
+import { getGenres } from '../../state/Movies/genres';
+import { mostValorate } from './mostValorate';
+
+const Slider = React.lazy(() => import('../../commons/Slider'))
 
 export default function Home() {
   const popularMovies = useSelector(state => state.popularMovies).movies;
-  const singleFilm = useSelector(state => state.singleFilm)
-  const [mainMovies, setMainMovies] = useState([]);
+  const genres = useSelector(state => state.genres);
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    (async () => {
+      if (!popularMovies?.length) return dispatch(getPopularMovies());
+      if (!genres?.length) return dispatch(getGenres());
+    })()
+  }, [popularMovies, genres, dispatch])
 
 
   return (
     <>
-      {popularMovies?.length && <MainView movie={popularMovies[0]} />}
-      <Slider />
+      <div className="home">
+        {popularMovies?.length && <MainView valorateMovies={mostValorate(popularMovies, 5)} />}
+        <div className="popular">
+          <PopularSlider />
+        </div>
+
+        <Suspense>
+          {genres.map((item, i) => (
+            <div className={`${item.name} home-section-container`} key={i}>
+              <Slider category={{ name: item.name, id: item.id }} index={i} />
+              {
+                <div className="slider-annex">
+                  <div className='contenido'>
+
+                  </div>
+                </div>
+              }
+            </div>
+          ))}
+        </Suspense>
+
+
+
+        {/* {showDetail && <DetailModal film={singleFilm} />} */}
+      </div>
     </>
   )
 }

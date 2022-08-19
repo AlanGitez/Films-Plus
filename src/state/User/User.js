@@ -1,7 +1,8 @@
 import User from "../../services/User";
 
-const { createAsyncThunk, createReducer } = require("@reduxjs/toolkit");
-const axios = require("axios");
+import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
+import axios from "axios";
+
 
 export const login = createAsyncThunk("SEND_LOGIN_REQUEST", async (body) => {
   const {error, data} = await User.loginRequest(body);

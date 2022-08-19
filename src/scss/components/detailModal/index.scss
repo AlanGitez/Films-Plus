@@ -1,0 +1,30 @@
+/* HEADER */
+@use "./header.scss";
+
+/* DETAIL */
+@use "./detail.scss";
+
+section.detail-container{
+    background-color: rgba(0,0,0,.9);
+    height: 850px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 500;
+    
+}
+
+@media (max-width:400px){
+    section.detail-container{
+        margin: 5% auto;
+        height: 90%;
+        width: 98%;
+
+    }
+}

@@ -10,6 +10,20 @@ html, body{
         rgba(0,0,0, 1));
     display: flex;
     flex-direction: column;
-  
+    position: relative;
     min-height: 100vh;
+}
+
+.home{
+    position: relative;
+    min-height: 100vh;
+
+    .home-section-container{
+        margin: 20px auto;
+    }
+}
+
+.container {
+    display: flex;
+    margin: 70px auto;
 }

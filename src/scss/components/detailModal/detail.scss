@@ -1,0 +1,36 @@
+section.detail-container{
+
+    .detail {
+        height: 60%;
+
+        .description{
+            margin: auto;
+            padding: 8px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: auto;
+            width: 95%;
+        }
+    }
+}
+
+
+@media (max-width:400px){
+    section.detail-container{
+        .detail {
+            height: 60%;
+    
+            .description{
+                margin: auto;
+                padding: 8px;
+                background-color: black;
+                color: white;
+                text-align: center;
+                height: auto;
+                width: 95%;
+            }
+        }
+
+    }
+}
