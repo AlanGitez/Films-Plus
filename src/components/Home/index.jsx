@@ -2,7 +2,6 @@ import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { getPopularMovies } from '../../state/Movies/popular';
 import MainView from './MainView'
-import DetailModal from '../../commons/DetailModal';
 import PopularSlider from '../../components/PopularSlider';
 import { getGenres } from '../../state/Movies/genres';
 import { mostValorate } from './mostValorate';
@@ -26,9 +25,10 @@ export default function Home() {
     <>
       <div className="home">
         {popularMovies?.length && <MainView valorateMovies={mostValorate(popularMovies, 5)} />}
-        <div className="popular">
+
+        {/* <div className="popular">
           <PopularSlider />
-        </div>
+        </div> */}
 
         <Suspense>
           {genres.map((item, i) => (
@@ -44,10 +44,6 @@ export default function Home() {
             </div>
           ))}
         </Suspense>
-
-
-
-        {/* {showDetail && <DetailModal film={singleFilm} />} */}
       </div>
     </>
   )

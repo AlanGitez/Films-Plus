@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { toggleShowDetail } from '../../state/UI/showDetail';
 import { IMG_URL } from '../../utils/paths';
 
 export default function DetailModal() {
+    const detailContainer = useRef();
     const popularMovies = useSelector(state => state.popularMovies).movies;
     const singleFilm = useSelector(state => state.singleFilm);
     const dispatch = useDispatch();
@@ -12,9 +13,14 @@ export default function DetailModal() {
         dispatch(toggleShowDetail())
     };
 
+    // useEffect(() => {
+    //     const body = document.querySelector("body");
+    //     body.appendChild(detailContainer.current);
+    // }, []);
+
     return (
         <>
-            <section className='detail-container'>
+            <section className='detail-container' ref={detailContainer}>
                 <header className='detail-header'>
 
                     <img src={IMG_URL + singleFilm.backdrop_path} alt="" />

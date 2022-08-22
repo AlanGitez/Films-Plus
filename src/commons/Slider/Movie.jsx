@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom"
 import { getSingleFilm } from '../../state/Movies/selectedFilm';
@@ -9,8 +10,11 @@ import { handlerHover } from './handlers';
 export default function Movie({ movie, i }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const movieRef = useRef();
 
-    const handlerSelectFilm = () => {
+    const handlerSelectFilm = (e) => {
+        console.log(movieRef.current);
+        console.log(e.target);
         dispatch(getSingleFilm(movie))
         dispatch(toggleShowDetail())
     };
@@ -19,17 +23,10 @@ export default function Movie({ movie, i }) {
         <>
             <div
                 className={`movie movie-${i}`}
-                onClick={handlerSelectFilm}
-                onMouseOver={handlerHover}>
+                onClick={(e) => handlerSelectFilm(e)}
+                onMouseOver={handlerHover}
+                ref={movieRef}>
                 <img className={`movie-${i}`} src={IMG_URL + movie.poster_path} alt="" />
-                {/* <header className='detail-header'>
-                </header>
-                <div className='detail-container'>
-                    <div className='detail'>
-                        <div className='info'></div>
-                        <div className='description'></div>
-                    </div>
-                </div> */}
             </div>
         </>
     )
