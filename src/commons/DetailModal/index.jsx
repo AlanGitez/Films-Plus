@@ -1,22 +1,16 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { toggleShowDetail } from '../../state/UI/showDetail';
 import { IMG_URL } from '../../utils/paths';
 
 export default function DetailModal() {
     const detailContainer = useRef();
-    const popularMovies = useSelector(state => state.popularMovies).movies;
     const singleFilm = useSelector(state => state.singleFilm);
     const dispatch = useDispatch();
 
     const handleClose = (e) => {
         dispatch(toggleShowDetail())
     };
-
-    // useEffect(() => {
-    //     const body = document.querySelector("body");
-    //     body.appendChild(detailContainer.current);
-    // }, []);
 
     return (
         <>
@@ -34,10 +28,7 @@ export default function DetailModal() {
                 </header>
                 <div className='detail'>
                     <div className='description'>
-                        {popularMovies?.length &&
-                            popularMovies[0].overview
-                        }
-
+                        {singleFilm.overview}
                     </div>
                     <div className='info'></div>
                 </div>

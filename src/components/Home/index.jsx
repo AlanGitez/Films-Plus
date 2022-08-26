@@ -7,6 +7,7 @@ import { getGenres } from '../../state/Movies/genres';
 import { mostValorate } from './mostValorate';
 
 const Slider = React.lazy(() => import('../../commons/Slider'))
+const HiddenAnnex = React.lazy(() => import('../../commons/HiddenAnnex'))
 
 export default function Home() {
   const popularMovies = useSelector(state => state.popularMovies).movies;
@@ -34,13 +35,7 @@ export default function Home() {
           {genres.map((item, i) => (
             <div className={`${item.name} home-section-container`} key={i}>
               <Slider category={{ name: item.name, id: item.id }} index={i} />
-              {
-                <div className="slider-annex">
-                  <div className='contenido'>
-
-                  </div>
-                </div>
-              }
+              <HiddenAnnex />
             </div>
           ))}
         </Suspense>

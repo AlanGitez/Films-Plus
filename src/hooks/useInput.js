@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-export default function () {
+export default function useInput () {
     const [value, setValue] = useState("");
     
     const onChange = (e) => {

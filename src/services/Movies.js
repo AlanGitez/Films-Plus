@@ -37,6 +37,21 @@ class Movies {
             
         }
     }
+
+    static async search(searchContent){  
+        try {
+            // resolver dos promesas, series y peliculas,
+            // de momento solo con las peliculas.
+            const { data } = await axios.get(`http://localhost:3001/api/movies/collection/search/${searchContent}`);
+            if(!data) return response(true, data);
+            return response(false, data);
+
+        } catch (error) {
+            return response(true, `Front Movies-Services ERROR: ${error.message}`);
+            
+        }
+    }
 }
+
 
 module.exports = Movies;

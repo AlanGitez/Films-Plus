@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
-export default function({margin = "100px"}){
+export default function useIntersectionObserver({margin = "100px"}){
     const [onView, setOnView] = useState(false);
     const ref = useRef();
 

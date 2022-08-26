@@ -2,10 +2,12 @@ import React, { useRef, useEffect, useState } from 'react'
 import { IMG_URL } from '../../utils/paths'
 import { BsFillInfoCircleFill } from "react-icons/bs"
 import { infoHover } from './hover';
-
-
+import { useDispatch } from 'react-redux';
+import { getSingleFilm } from '../../state/Movies/selectedFilm';
+import { toggleShowDetail } from '../../state/UI/showDetail';
 
 export default function MainView({ valorateMovies }) {
+    const dispatch = useDispatch();
     const [isHover, setIsHover] = useState(false)
     const [index, setIndex] = useState(0);
 
@@ -45,7 +47,12 @@ export default function MainView({ valorateMovies }) {
 
                             <div className="menu-container">
                                 <BsFillInfoCircleFill className='info-icon' />
-                                <button className='btn-info'>MORE INFO</button>
+                                <button
+                                    className='btn-info'
+                                    onClick={() => {
+                                        dispatch(getSingleFilm(valorateMovies[index]))
+                                        dispatch(toggleShowDetail(true))
+                                    }}>MORE INFO</button>
                             </div>
                         </div>
 

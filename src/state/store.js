@@ -3,6 +3,8 @@ import logger from "redux-logger";
 import { getGenresReducer } from "./Movies/genres";
 import { popularMoviesReducer } from "./Movies/popular";
 import { singleFilmReducer } from "./Movies/selectedFilm";
+import { hasGuestReducer } from "./UI/hasGuest";
+import { searchingReducer } from "./UI/searching";
 import { showDetailReducer } from "./UI/showDetail";
 // import { currentFilmReducer } from "./currentFilm";
 // import { currentListFilmsReducer } from "./currentListFilms";
@@ -16,8 +18,10 @@ const store = configureStore({
     user: userReducer,
     genres: getGenresReducer,
     popularMovies: popularMoviesReducer, 
-    singleFilm:singleFilmReducer,
-    showDetail:showDetailReducer,
+    singleFilm: singleFilmReducer,
+    showDetail: showDetailReducer,
+    searching: searchingReducer,
+    guest: hasGuestReducer,
     // currentFilm: currentFilmReducer,
     // currentListFilms: currentListFilmsReducer,
     // favoriteList: favoriteListReducer
