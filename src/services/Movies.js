@@ -2,6 +2,7 @@ const { response } = require("../utils/createResponse");
 const axios = require("axios");
 
 class Movies {
+
     static async popular(){
         try {
             const {data} = await axios.get("http://localhost:3001/api/movies");
@@ -51,6 +52,14 @@ class Movies {
             
         }
     }
+
+    static async getCast(id){
+        try {
+            const { data } = await axios.get(`http://localhost:3001/api/movies/single/cast/${id}`)
+        } catch (error) {
+            return response(true, `Front Movies-Services ERROR: ${error.message}`);
+        }
+    };
 }
 
 

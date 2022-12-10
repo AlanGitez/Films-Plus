@@ -1,17 +1,31 @@
 section.detail-container{
 
     .detail {
-        height: 60%;
-
-        .description{
-            margin: auto;
-            padding: 8px;
-            background-color: black;
+        display: flex;
+        height: 100%;
+        background-color: black;
+        margin-top: 10px;
+        .defail-container{
+            margin: 2px 5px auto 5px;
+            padding: 7px;
             color: white;
-            text-align: center;
-            height: auto;
-            width: 95%;
+            width: 50%;
         }
+        
+        
+        .info{
+            box-shadow: 0.5px 0.5px 7px whitesmoke, inset 0px 0px 7px rgb(148, 148, 148);
+            
+            .genres{
+                margin-bottom: 15px;
+            }
+        }
+
+        // .description{
+           
+  
+        // }
+
     }
 }
 

@@ -19,7 +19,7 @@ export default function Movie({ movie, i }) {
         <>
             <div
                 className={`movie movie-${i}`}
-                onClick={(e) => handlerSelectFilm(e)}
+                onClick={(e) => handlerSelectFilm}
                 onMouseOver={handlerHover}
                 ref={movieRef}>
                 <img className={`movie-${i}`} src={IMG_URL + movie.poster_path} alt="" />

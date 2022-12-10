@@ -1,10 +1,12 @@
 import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
+import { Route, Routes, useNavigate } from "react-router";
 import { getPopularMovies } from '../../state/Movies/popular';
 import MainView from './MainView'
 import PopularSlider from '../../components/PopularSlider';
 import { getGenres } from '../../state/Movies/genres';
 import { mostValorate } from './mostValorate';
+import DetailModal from '../../commons/DetailModal';
 
 const Slider = React.lazy(() => import('../../commons/Slider'))
 const HiddenAnnex = React.lazy(() => import('../../commons/HiddenAnnex'))
@@ -40,6 +42,10 @@ export default function Home() {
           ))}
         </Suspense>
       </div>
+
+      <Routes>
+        <Route path="/single/:id" element={<DetailModal />} />
+      </Routes>
     </>
   )
 }

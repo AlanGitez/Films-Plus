@@ -15,20 +15,13 @@ export default function Movie({ movie, i }) {
 
     return (
         <>
-            <div
+            {IMG_URL && movie ? 
+                <div
                 className={`movie movie-${i}`}
                 onClick={handlerSelectFilm}
                 onMouseOver={handlerHover}>
                 <img className={`movie-${i}`} src={IMG_URL + movie.poster_path} alt="" />
-                {/* <header className='detail-header'>
-                </header>
-                <div className='detail-container'>
-                    <div className='detail'>
-                        <div className='info'></div>
-                        <div className='description'></div>
-                    </div>
-                </div> */}
-            </div>
+            </div> : null}
         </>
     )
 }

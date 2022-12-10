@@ -1,9 +1,0 @@
-{
-    "name": "general structure",
-    "img_url": "https://image.tmdb.org/t/p/original",
-    "sections": [
-        "Recommended movies",
-        "Recommended series",
-        "Favorite films"
-    ]
-}

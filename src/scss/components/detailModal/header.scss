@@ -15,6 +15,7 @@ section.detail-container{
             display: flex;
             justify-content: flex-end;
             position: absolute;
+            transition: .5s ease-out;
             top: 0;
             left: 0;                
             width: 100%;
@@ -29,8 +30,14 @@ section.detail-container{
                 cursor: pointer;
             }
         }
+
+        .menu:hover{
+            background-color: rgba(0,0,0,1);
+
+        }
     }
 }
+
 
 
 
